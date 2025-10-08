@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DermaGuide - Авторизація</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #FFFFFF;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #f8f8f8;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+            color: #000;
+        }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #000;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 40px;
+            padding: 40px 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Форма */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 400px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        /* Фото */
+        .photo {
+            width: 230px;
+            height: 230px;
+            object-fit: cover;
+        }
+
+        /* Опитування */
+        .survey {
+            max-width: 600px;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        .survey div {
+            margin-bottom: 20px;
+        }
+
+        .survey .options {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            margin-top: 5px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #f8f8f8;
+            margin-top: 40px;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #000;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>DermaGuide</h1>
+        <nav>
+            <a href="index.html">Головна</a>
+            <a href="analysis.html">Сканування</a>
+        </nav>
+    </header>
+
+    <!-- Основний контент -->
+    <main>
+        <div style="display: flex; align-items: center; gap: 40px; justify-content: center; padding: 40px 20px;">
+            <!-- Форма -->
+            <form style="display: flex; flex-direction: column; gap: 20px; width: 400px;">
+                <h2>Авторизація</h2>
+                <div>
+                    <label for="name">Ім’я</label>
+                    <input type="text" id="name" placeholder="Введіть ваше ім’я">
+                </div>
+                <div>
+                    <label for="surname">Прізвище</label>
+                    <input type="text" id="surname" placeholder="Введіть ваше прізвище">
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="example@gmail.com">
+                </div>
+            </form>
+
+            <!-- Фото -->
+            <div>
+                <img src="images/image18.jpg" alt="Фото користувача" style="width: 250px; height: 250px; object-fit: cover; border-radius: 8px;">
+            </div>
+        </div>
+    </main>
+
+    <!-- Опитування -->
+    <form class="survey" action="recommendations.html" method="get">
+        <div>
+            <p>Який твій тип шкіри?</p>
+            <div class="options">
+                <label><input type="radio" name="skin" value="dry"> Суха</label>
+                <label><input type="radio" name="skin" value="normal"> Нормальна</label>
+                <label><input type="radio" name="skin" value="combination"> Комбінована</label>
+                <label><input type="radio" name="skin" value="oily"> Жирна</label>
+            </div>
+        </div>
+
+        <div>
+            <p>Які проблеми тебе турбують? (можна декілька)</p>
+            <div class="options">
+                <label><input type="checkbox" name="problem" value="acne"> Акне / висипання</label>
+                <label><input type="checkbox" name="problem" value="sensitivity"> Чутливість / почервоніння</label>
+                <label><input type="checkbox" name="problem" value="pigmentation"> Пігментація / нерівний тон</label>
+                <label><input type="checkbox" name="problem" value="wrinkles"> Зморшки / втрата пружності</label>
+                <label><input type="checkbox" name="problem" value="dryness"> Зневоднення / стягнутість</label>
+                <label><input type="checkbox" name="problem" value="none"> Жодна</label>
+            </div>
+        </div>
+
+        <div>
+            <p>Головна мета догляду за шкірою:</p>
+            <div class="options">
+                <label><input type="radio" name="goal" value="moisture"> Глибоке зволоження</label>
+                <label><input type="radio" name="goal" value="barrier"> Відновлення бар'єру</label>
+                <label><input type="radio" name="goal" value="antiacne"> Боротьба з висипаннями</label>
+                <label><input type="radio" name="goal" value="brightening"> Освітлення та вирівнювання тону</label>
+                <label><input type="radio" name="goal" value="antiaging"> Антивіковий догляд</label>
+            </div>
+        </div>
+
+        <!-- Кнопка після опитування -->
+        <input type="submit" value="Підтвердити">
+    </form>
+
+    <!-- Footer -->
+    <footer>
+        <p>Контактна інформація:</p>
+        <p>Email: dermaguide@gmail.com</p>
+        <p>Телефон: +38 000 00 00</p>
+        <p>Соцмережі: 
+            <a href="https://facebook.com/derma_guide">Facebook</a> | 
+            <a href="https://instagram.com/derma_guide">Instagram</a>
+        </p>
+    </footer>
+
+</body>
+</html>

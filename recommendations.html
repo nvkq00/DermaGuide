@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DermaGuide - Рекомендації</title>
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #FFFFFF;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #f8f8f8;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+            color: #000;
+        }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: black;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .products {
+            display: flex;
+            justify-content: center;
+            gap: 100px;
+            margin-top: 50px;
+        }
+
+        .product-card {
+            width: 250px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .product-card img {
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .product-card p {
+            margin: 6px 0;
+            width: 100%;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .description {
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-card a {
+            display: inline-block;
+            padding: 8px 15px;
+            text-decoration: none;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            color: black;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #f8f8f8;
+            margin-top: 40px;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #000;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>DermaGuide</h1>
+        <nav>
+            <a href="index.html">Головна</a>
+            <a href="analysis.html">Сканування</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Рекомендовані засоби</h2>
+
+        <div class="products">
+            <div class="product-card">
+                <img src="images/image18(1).jpg" alt="CeraVe Acne Control Cleanser">
+                <p><strong>CeraVe Blemish Control Cleanser</strong></p>
+                <p>Допомагає очистити пори та зменшити кількість висипань.</p>
+                <a href="product.html">Детальніше про продукт</a>
+            </div>
+
+            <div class="product-card">
+                <img src="images/image25.jpg" alt="La Roche-Posay Hydrating Gentle Cleanser">
+                <p><strong>La Roche-Posay Hydrating Gentle Cleanser</strong></p>
+                <p>Допомагає дбайливо очистити шкіру, не пошкоджуючи бар'єр.</p>
+                <a href="product2.html">Детальніше про продукт</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p><strong>Контактна інформація:</strong></p>
+        <p>Email: dermaguide@gmail.com</p>
+        <p>Телефон: +38 000 00 00</p>
+        <p>Соцмережі: 
+            <a href="https://facebook.com/derma_guide">Facebook</a> | 
+            <a href="https://instagram.com/derma_guide">Instagram</a>
+        </p>
+    </footer>
+
+</body>
+</html>
