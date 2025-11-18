@@ -4,111 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DermaGuide - Головна</title>
-
-    <style>
-        .hero {
-            position: relative;
-            width: 100%;
-            height: 400px;
-            background-image: url('images/image16.jpg');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 64px;
-            color: black; 
-            text-shadow: none;
-        }
-
-        main {
-            text-align: center;
-            padding: 40px 20px;
-        }
-
-        ul {
-            list-style-position: inside;
-            padding-left: 0;
-            display: inline-block;
-            text-align: left;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            background-color: #f0f0f0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            color: black;
-            text-decoration: none;
-            font-size: 16px;
-            cursor: pointer;
-            margin: 10px;
-        }
-
-        .btn:hover {
-            background-color: #e0e0e0;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #f8f8f8;
-            margin-top: 40px;
-        }
-
-        footer a {
-            text-decoration: none;
-            color: #000;
-            margin: 0 5px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="home-page">
 
     <header class="hero">
         <h1>DermaGuide</h1>
     </header>
 
-    <main>
-        <section aria-label="Про проект">
-            <h2>Ласкаво просимо до DermaGuide</h2>
-            <p>DermaGuide — твій особистий провідник у світі косметики. Ми допомагаємо перетворити склад продуктів на просту та зрозумілу інструкцію, адаптовану саме під твою шкіру.</p>
+    <main class="container">
+        <!-- Intro section with logo -->
+        <section class="intro">
+            <div class="intro-logo">
+                <img src="images/image18.jpg" alt="DermaGuide Logo">
+            </div>
+            <div class="intro-text">
+                <p style="font-size: 32px; font-weight: 700; line-height: 120%;">DermaGuide — твій особистий провідник у світі косметики. Ми допомагаємо перетворити склад продуктів на просту та зрозумілу інструкцію, адаптовану саме під твою шкіру.</p>
+            </div>
         </section>
 
-        <section aria-label="Авторизація">
-            <h3>Пройдіть короткий тест і отримайте персональний аналіз</h3>
-            <a href="auth.html" class="btn">Авторизуйся</a>
+        <!-- CTA section 1 with magnifier icon -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <div class="cta-title-with-icon">
+                    <div class="cta-icon-small">
+                        <img src="images/image21,22.jpg" alt="Magnifier Icon">
+                    </div>
+                    <h3>Пройдіть короткий тест і отримайте персональний аналіз</h3>
+                </div>
+                <a href="auth.html" class="btn">Авторизуйся</a>
+            </div>
         </section>
 
-        <section aria-label="Сканування інгредієнтів">
-            <h3>Введи інгредієнти, а ми проаналізуємо їх</h3>
-            <a href="analysis.html" class="btn">Сканування</a>
+        <!-- CTA section 2 with magnifier icon -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <div class="cta-title-with-icon">
+                    <div class="cta-icon-small">
+                        <img src="images/image21,22.jpg" alt="Magnifier Icon">
+                    </div>
+                    <h3>Введи інгредієнти, а ми проаналізуємо їх</h3>
+                </div>
+                <a href="analysis.html" class="btn">Сканування</a>
+            </div>
         </section>
 
-        <section aria-label="Переваги">
-            <h3>Чому обирають нас?</h3>
-            <ul>
-                <li>Персоналізація замість універсальних порад</li>
-                <li>Науково підтверджена база інгредієнтів</li>
-                <li>Прості пояснення без складних термінів</li>
-                <li>Рекомендації, адаптовані до твоєї шкіри</li>
-            </ul>
+        <div class="divider"></div>
+
+        <!-- Benefits section in columns with droplet icons -->
+        <section class="benefits">
+            <div class="benefits-header">
+                <h3>Чому обирають нас?</h3>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-item benefit-left">
+                    <div class="benefit-icon">
+                        <img src="images/image27-30.jpg" alt="Droplet Icon">
+                    </div>
+                    <span class="benefit-text">Персоналізація замість універсальних порад</span>
+                </div>
+                <div class="benefit-item benefit-right">
+                    <div class="benefit-icon">
+                        <img src="images/image27-30.jpg" alt="Droplet Icon">
+                    </div>
+                    <span class="benefit-text">Науково підтверджена база інгредієнтів</span>
+                </div>
+                <div class="benefit-item benefit-left">
+                    <div class="benefit-icon">
+                        <img src="images/image27-30.jpg" alt="Droplet Icon">
+                    </div>
+                    <span class="benefit-text">Прості пояснення без складних термінів</span>
+                </div>
+                <div class="benefit-item benefit-right">
+                    <div class="benefit-icon">
+                        <img src="images/image27-30.jpg" alt="Droplet Icon">
+                    </div>
+                    <span class="benefit-text">Рекомендації, адаптовані до твоєї шкіри</span>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p><strong>Контактна інформація:</strong></p>
-        <p>Email: dermaguide@gmail.com</p>
-        <p>Телефон: +38 000 00 00</p>
-        <p>Соцмережі: 
-            <a href="https://facebook.com/derma_guide">Facebook</a> | 
-            <a href="https://instagram.com/derma_guide">Instagram</a>
-        </p>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">DermaGuide</div>
+                <div class="social-icons">
+                    <a href="https://facebook.com/derma_guide" class="social-icon">FB</a>
+                    <a href="https://instagram.com/derma_guide" class="social-icon">IG</a>
+                </div>
+            </div>
+            <div class="footer-contacts">
+                <p><strong>Контактна інформація:</strong></p>
+                <p>Email: dermaguide@gmail.com</p>
+                <p>Телефон: +38 000 00 00</p>
+                <p>Соцмережі: facebook: derma_guide | inst: derma_guide</p>
+            </div>
+        </div>
     </footer>
 
 </body>

@@ -4,141 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CeraVe Acne Control Cleanser - DermaGuide</title>
-
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #FFFFFF;
-        }
-
-        /* Header */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 40px;
-            background-color: #f8f8f8;
-        }
-
-        header h2 {
-            margin: 0;
-            font-size: 28px;
-            color: #000;
-        }
-
-        nav a {
-            margin-left: 20px;
-            text-decoration: none;
-            color: #000;
-        }
-
-        /* Основна частина */
-        main {
-            padding: 40px 60px;
-        }
-
-        main h1 {
-            margin-top: 0;
-            font-size: 32px;
-        }
-
-        main p {
-            font-size: 18px;
-            color: #333;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        td {
-            vertical-align: top;
-        }
-
-        /* Колонки */
-        .col-image {
-            width: 40%;
-        }
-
-        .col-text {
-            width: 60%;
-            padding-left: 20px;
-            padding-right: 50px;
-        }
-
-        img {
-            border-radius: 8px;
-            display: block;
-            margin-left: 40px;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #f8f8f8;
-            margin-top: 40px;
-        }
-
-        footer a {
-            text-decoration: none;
-            color: #000;
-            margin: 0 5px;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Верхня частина -->
-    <header>
-        <h2>DermaGuide</h2>
-        <nav>
-            <a href="index.html">Головна</a> 
-            <a href="analysis.html">Сканування</a>
+    <!-- Header -->
+    <header class="main-header">
+        <h1 class="logo">DermaGuide</h1>
+        <nav class="simple-nav">
+            <a href="index.html" class="btn-nav btn-nav-light">На головну</a>
+            <a href="analysis.html" class="btn-nav btn-nav-dark">Сканування</a>
         </nav>
     </header>
+    
+<!-- Основна частина -->
+    <main class="main-content">
+        <section class="product-detail">
+            <div class="product-header">
+                <h2>CeraVe Acne Control Cleanser</h2>
+                <p class="product-subtitle">Глибоко очищувальний гель для схильної до недосконалостей шкіри обличчя та тіла</p>
+            </div>
 
-    <!-- Основна частина -->
-    <main>
-        <h1>CeraVe Acne Control Cleanser</h1>
-        <p>Глибоко очищувальний гель для схильної до недосконалостей шкіри обличчя та тіла</p>
-
-        <table>
-            <tr>
-                <td class="col-image">
-                    <img src="images/image18(1).jpg" alt="CeraVe Acne Control Cleanser" width="450" height="450">
-                </td>
-                <td class="col-text">
-                    <h3>Опис</h3>
-                    <p>
-                        Очищаючий гель, що піниться, для шкіри, схильної до недосконалостей, допомагає зменшити видимість недоліків, 
-                        видаляє надлишки себуму, залишаючи шкіру м’якою та гладенькою. Завдяки своїй формулі, засіб проникає глибоко 
-                        в пори, усуваючи причину недосконалостей, зберігаючи при цьому природний захисний бар’єр шкіри.
-                    </p>
-                    <p>
-                        Acne Control Cleanser із 2% саліцилової кислоти призначений для видалення прищів, зменшення чорних крапок 
-                        і покращення зовнішнього вигляду пор, а очищаюча глина допомагає поглинати надлишок жиру.
-                    </p>
-                </td>
-            </tr>
-        </table>
+            <div class="product-content">
+                <div class="product-image">
+                    <img src="images/image18(1).jpg" alt="CeraVe Acne Control Cleanser">
+                </div>
+                
+                <div class="product-info">
+                    <div class="product-description">
+                        <h3>Опис:</h3>
+                        <p>
+                            Очищаючий гель, що піниться, для шкіри, схильної до недосконалостей, допомагає зменшити видимість недоліків, 
+                            видаляє надлишки себуму, залишаючи шкіру м'якою та гладенькою. Завдяки своїй формулі, засіб проникає глибоко 
+                            в пори, усуваючи причину недосконалостей, зберігаючи при цьому природний захисний бар'єр шкіри.
+                        </p>
+                        <p>
+                            Acne Control Cleanser із 2% саліцилової кислоти призначений для видалення прищів, зменшення чорних крапок 
+                            і покращення зовнішнього вигляду пор, а очищаюча глина допомагає поглинати надлишок жиру.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Нижня частина -->
+    <!-- Footer -->
     <footer>
-        <p><strong>Контактна інформація:</strong></p>
-        <p>Email: dermaguide@gmail.com</p>
-        <p>Телефон: +38 000 00 00</p>
-        <p>Соцмережі: 
-            <a href="https://facebook.com/derma_guide">Facebook</a> | 
-            <a href="https://instagram.com/derma_guide">Instagram</a>
-        </p>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">DermaGuide</div>
+                <div class="social-icons">
+                    <a href="https://facebook.com/derma_guide" class="social-icon">FB</a>
+                    <a href="https://instagram.com/derma_guide" class="social-icon">IG</a>
+                </div>
+            </div>
+            <div class="footer-contacts">
+                <p><strong>Контактна інформація:</strong></p>
+                <p>Email: dermaguide@gmail.com</p>
+                <p>Телефон: +38 000 00 00</p>
+                <p>facebook: derma_guide | inst: derma_guide</p>
+            </div>
+        </div>
     </footer>
 
 </body>

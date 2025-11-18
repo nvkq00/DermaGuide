@@ -1,199 +1,196 @@
 <!DOCTYPE html>
 <html lang="uk">
+<script src="js/validation.js"></script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DermaGuide - Авторизація</title>
-
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #FFFFFF;
-        }
-
-        /* Header */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 40px;
-            background-color: #f8f8f8;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 28px;
-            color: #000;
-        }
-
-        nav a {
-            margin-left: 20px;
-            text-decoration: none;
-            color: #000;
-        }
-
-        main {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            gap: 40px;
-            padding: 40px 20px;
-            flex-wrap: wrap;
-        }
-
-        /* Форма */
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            width: 400px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        input[type="text"],
-        input[type="email"] {
-            width: 100%;
-            padding: 8px;
-            box-sizing: border-box;
-        }
-
-        /* Фото */
-        .photo {
-            width: 230px;
-            height: 230px;
-            object-fit: cover;
-        }
-
-        /* Опитування */
-        .survey {
-            max-width: 600px;
-            margin: 40px auto;
-            text-align: center;
-        }
-
-        .survey div {
-            margin-bottom: 20px;
-        }
-
-        .survey .options {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 8px;
-            margin-top: 5px;
-        }
-
-        input[type="submit"] {
-            padding: 10px 20px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #f8f8f8;
-            margin-top: 40px;
-        }
-
-        footer a {
-            text-decoration: none;
-            color: #000;
-            margin: 0 5px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <!-- Header -->
-    <header>
-        <h1>DermaGuide</h1>
-        <nav>
-            <a href="index.html">Головна</a>
-            <a href="analysis.html">Сканування</a>
+    <header class="main-header">
+        <h1 class="logo">DermaGuide</h1>
+        <nav class="simple-nav">
+            <a href="index.html" class="btn-nav btn-nav-light">На головну</a>
+            <a href="analysis.html" class="btn-nav btn-nav-dark">Сканування</a>
         </nav>
     </header>
 
     <!-- Основний контент -->
-    <main>
-        <div style="display: flex; align-items: center; gap: 40px; justify-content: center; padding: 40px 20px;">
+    <main class="auth-main">
+        <div class="auth-container">
             <!-- Форма -->
-            <form style="display: flex; flex-direction: column; gap: 20px; width: 400px;">
-                <h2>Авторизація</h2>
-                <div>
-                    <label for="name">Ім’я</label>
-                    <input type="text" id="name" placeholder="Введіть ваше ім’я">
-                </div>
-                <div>
-                    <label for="surname">Прізвище</label>
-                    <input type="text" id="surname" placeholder="Введіть ваше прізвище">
-                </div>
-                <div>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="example@gmail.com">
-                </div>
-            </form>
+            <div class="auth-form-section">
+                <h2 class="auth-title">Авторизація</h2>
+                <form class="auth-form">
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="name">Ім'я</label>
+                            <div class="input-field">
+                                <input type="text" id="name" placeholder="Введіть ваше ім'я">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="surname">Прізвище</label>
+                            <div class="input-field">
+                                <input type="text" id="surname" placeholder="Введіть ваше прізвище">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group full-width">
+                        <label for="email">Email address</label>
+                        <div class="input-field">
+                            <input type="email" id="email" placeholder="example@gmail.com">
+                        </div>
+                    </div>
+                </form>
+            </div>
 
             <!-- Фото -->
-            <div>
-                <img src="images/image18.jpg" alt="Фото користувача" style="width: 250px; height: 250px; object-fit: cover; border-radius: 8px;">
+            <div class="auth-image">
+                <img src="images/image18.jpg" alt="Фото користувача">
             </div>
+        </div>
+
+        <!-- Опитування -->
+        <div class="survey-section">
+            <!-- Тип шкіри -->
+            <div class="survey-group">
+                <div class="survey-header">
+                    <div class="survey-icon">
+                        <img src="images/image21,22.jpg" alt="Лупа">
+                    </div>
+                    <h3 class="survey-title">Який твій тип шкіри?</h3>
+                </div>
+                <div class="options-group">
+                    <label class="option-item">
+                        <input type="radio" name="skin" value="dry">
+                        <span class="custom-radio"></span>
+                        <span class="option-text">Суха (відчуття стягнутості, лущення).</span>
+                    </label>
+                    <label class="option-item">
+                        <input type="radio" name="skin" value="normal">
+                        <span class="custom-radio"></span>
+                        <span class="option-text">Нормальна (збалансована, без особливих проблем).</span>
+                    </label>
+                    <label class="option-item">
+                        <input type="radio" name="skin" value="combination">
+                        <span class="custom-radio"></span>
+                        <span class="option-text">Комбінована (жирна в Т-зоні, нормальна або суха на щоках).</span>
+                    </label>
+                    <label class="option-item">
+                        <input type="radio" name="skin" value="oily">
+                        <span class="custom-radio"></span>
+                        <span class="option-text">Жирна (блиск, розширені пори).</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Проблеми -->
+            <div class="survey-group">
+                <div class="survey-header">
+                    <div class="survey-icon">
+                        <img src="images/image21,22.jpg" alt="Лупа">
+                    </div>
+                    <h3 class="survey-title">Які проблеми тебе турбують? Обери кілька варіантів</h3>
+                </div>
+                <div class="options-group">
+                    <label class="option-item">
+                        <input type="checkbox" name="problem" value="acne">
+                        <span class="custom-checkbox"></span>
+                        <span class="option-text">Акне / висипання.</span>
+                    </label>
+                    <label class="option-item">
+                        <input type="checkbox" name="problem" value="sensitivity">
+                        <span class="custom-checkbox"></span>
+                        <span class="option-text">Чутливість / почервоніння.</span>
+                    </label>
+                    <label class="option-item">
+                        <input type="checkbox" name="problem" value="pigmentation">
+                        <span class="custom-checkbox"></span>
+                        <span class="option-text">Пігментація / нерівний тон.</span>
+                    </label>
+                    <label class="option-item">
+                        <input type="checkbox" name="problem" value="wrinkles">
+                        <span class="custom-checkbox"></span>
+                        <span class="option-text">Зморшки / втрата пружності.</span>
+                    </label>
+                    <label class="option-item">
+                        <input type="checkbox" name="problem" value="dryness">
+                        <span class="custom-checkbox"></span>
+                        <span class="option-text">Зневоднення / стягнутість.</span>
+                    </label>
+                    <label class="option-item">
+                        <input type="checkbox" name="problem" value="none">
+                        <span class="custom-checkbox"></span>
+                        <span class="option-text">Жодна з вище перечислених</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Мета догляду -->
+            <div class="survey-group">
+                <div class="survey-header">
+                    <div class="survey-icon">
+                        <img src="images/image21,22.jpg" alt="Лупа">
+                    </div>
+                    <h3 class="survey-title">Яка твоя головна мета у догляді за шкірою?</h3>
+                </div>
+                <div class="options-group">
+                    <label class="option-item">
+                        <input type="radio" name="goal" value="barrier">
+                        <span class="custom-radio"></span>
+                        <span class="option-text">Відновлення захисного бар'єру.</span>
+                    </label>
+                    <label class="option-item">
+                        <input type="radio" name="goal" value="moisture">
+                        <span class="custom-radio"></span>
+                        <span class="option-text">Глибоке зволоження.</span>
+                    </label>
+                    <label class="option-item">
+                        <input type="radio" name="goal" value="antiacne">
+                        <span class="custom-radio"></span>
+                        <span class="option-text">Боротьба з висипаннями.</span>
+                    </label>
+                    <label class="option-item">
+                        <input type="radio" name="goal" value="brightening">
+                        <span class="custom-radio"></span>
+                        <span class="option-text">Освітлення та вирівнювання тону.</span>
+                    </label>
+                    <label class="option-item">
+                        <input type="radio" name="goal" value="antiaging">
+                        <span class="custom-radio"></span>
+                        <span class="option-text">Антивіковий догляд.</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Кнопка підтвердження -->
+            <a href="recommendations.html" class="btn btn-nav confirm-btn">Підтвердити</a>
         </div>
     </main>
 
-    <!-- Опитування -->
-    <form class="survey" action="recommendations.html" method="get">
-        <div>
-            <p>Який твій тип шкіри?</p>
-            <div class="options">
-                <label><input type="radio" name="skin" value="dry"> Суха</label>
-                <label><input type="radio" name="skin" value="normal"> Нормальна</label>
-                <label><input type="radio" name="skin" value="combination"> Комбінована</label>
-                <label><input type="radio" name="skin" value="oily"> Жирна</label>
-            </div>
-        </div>
-
-        <div>
-            <p>Які проблеми тебе турбують? (можна декілька)</p>
-            <div class="options">
-                <label><input type="checkbox" name="problem" value="acne"> Акне / висипання</label>
-                <label><input type="checkbox" name="problem" value="sensitivity"> Чутливість / почервоніння</label>
-                <label><input type="checkbox" name="problem" value="pigmentation"> Пігментація / нерівний тон</label>
-                <label><input type="checkbox" name="problem" value="wrinkles"> Зморшки / втрата пружності</label>
-                <label><input type="checkbox" name="problem" value="dryness"> Зневоднення / стягнутість</label>
-                <label><input type="checkbox" name="problem" value="none"> Жодна</label>
-            </div>
-        </div>
-
-        <div>
-            <p>Головна мета догляду за шкірою:</p>
-            <div class="options">
-                <label><input type="radio" name="goal" value="moisture"> Глибоке зволоження</label>
-                <label><input type="radio" name="goal" value="barrier"> Відновлення бар'єру</label>
-                <label><input type="radio" name="goal" value="antiacne"> Боротьба з висипаннями</label>
-                <label><input type="radio" name="goal" value="brightening"> Освітлення та вирівнювання тону</label>
-                <label><input type="radio" name="goal" value="antiaging"> Антивіковий догляд</label>
-            </div>
-        </div>
-
-        <!-- Кнопка після опитування -->
-        <input type="submit" value="Підтвердити">
-    </form>
-
     <!-- Footer -->
     <footer>
-        <p>Контактна інформація:</p>
-        <p>Email: dermaguide@gmail.com</p>
-        <p>Телефон: +38 000 00 00</p>
-        <p>Соцмережі: 
-            <a href="https://facebook.com/derma_guide">Facebook</a> | 
-            <a href="https://instagram.com/derma_guide">Instagram</a>
-        </p>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">DermaGuide</div>
+                <div class="social-icons">
+                    <a href="https://facebook.com/derma_guide" class="social-icon">FB</a>
+                    <a href="https://instagram.com/derma_guide" class="social-icon">IG</a>
+                </div>
+            </div>
+            <div class="footer-contacts">
+                <p><strong>Контактна інформація:</strong></p>
+                <p>Email: dermaguide@gmail.com</p>
+                <p>Телефон: +38 000 00 00</p>
+                <p>facebook: derma_guide | inst: derma_guide</p>
+            </div>
+        </div>
     </footer>
 
 </body>
