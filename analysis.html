@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="uk">
+<script src="js/main.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DermaGuide - Сканування</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-left">
+            <h1 class="logo">DermaGuide</h1>
+            <button id="theme-toggle" class="btn-nav btn-nav-dark">Темна тема</button>
+        </div>
+        <nav class="simple-nav">
+            <a href="index.html" class="btn-nav btn-nav-light">На головну</a>
+            <a href="auth.html" class="btn-nav btn-nav-dark">Авторизація</a>
+        </nav>
+    </header>
+
+    <!-- Основний контент -->
+    <main class="main-content">
+        <section class="page-header analysis-header">
+            <div class="header-content">
+                <div class="header-text">
+                    <h2>Перевірка складу</h2>
+                    <p class="analysis-description">Введіть список інгредієнтів з вашого косметичного засобу</p>
+                </div>
+                <div class="header-image">
+                    <img src="images/image21,22.jpg" alt="Перевірка складу">
+                </div>
+            </div>
+        </section>
+
+        <!-- Форма для введення інгредієнтів -->
+        <section class="analysis-section">
+            <div class="analysis-container">
+                <textarea id="ingredients" placeholder="Наприклад: Aqua, Glycerin, Niacinamide, Salicylic Acid, Parfum..."></textarea>
+                <button class="btn btn-nav confirm-btn" id="analyze-btn">Пошук</button>
+            </div>
+        </section>
+
+        <!-- Блок результатів аналізу -->
+        <section id="results" class="results-section">
+            <div class="results-header">
+                <h3>Результати аналізу</h3>
+            </div>
+            
+            <div class="results-container">
+                <table id="results-table">
+                    <thead>
+                        <tr>
+                            <th>Інгредієнт</th>
+                            <th>Рівень безпеки</th>
+                            <th>Пояснення</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">DermaGuide</div>
+                <div class="social-icons">
+                    <a href="https://facebook.com/derma_guide" class="social-icon">FB</a>
+                    <a href="https://instagram.com/derma_guide" class="social-icon">IG</a>
+                </div>
+            </div>
+            <div class="footer-contacts">
+                <p><strong>Контактна інформація:</strong></p>
+                <p>Email: dermaguide@gmail.com</p>
+                <p>Телефон: +38 000 00 00</p>
+                <p>facebook: derma_guide | inst: derma_guide</p>
+            </div>
+        </div>
+        <p id="current-date"></p>
+    </footer>
+</body>
+</html>

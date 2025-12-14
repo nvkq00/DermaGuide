@@ -1,0 +1,591 @@
+/* Component styles */
+/* Buttons */
+.btn {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 24px;
+    gap: 8px;
+    background: #512728;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 150%;
+    color: #FFFFFF;
+    text-align: center;
+    transition: all 0.3s ease;
+    min-width: 200px;
+    height: 74px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #3a1c1c;
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-large {
+    width: 584px;
+}
+
+/* Auth Navigation Buttons */
+.btn-nav {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    text-align: center;
+    transition: all 0.3s ease;
+    min-width: 120px;
+    height: 44px;
+    text-decoration: none;
+    border: 2px solid transparent;
+}
+
+.btn-nav-light {
+    background: #F5F5F5;
+    color: #512728;
+    border-color: #F5F5F5;
+}
+
+.btn-nav-light:hover {
+    background: #512728;
+    color: #FFFFFF;
+    border-color: #512728;
+    transform: translateY(-1px);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.btn-nav-dark {
+    background: #512728;
+    color: #FFFFFF;
+    border-color: #512728;
+}
+
+.btn-nav-dark:hover {
+    background: #F5F5F5;
+    color: #512728;
+    border-color: #512728;
+    transform: translateY(-1px);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Divider */
+.divider {
+    width: 100%;
+    max-width: 989px;
+    height: 0px;
+    border: 3px solid #5DAA98;
+    margin: 80px auto;
+    transform: rotate(0.06deg);
+}
+
+/* Benefit icons */
+.benefit-icon {
+    width: 67px;
+    height: 74px;
+    flex-shrink: 0;
+}
+
+/* Images */
+.content-image {
+    margin: 20px auto;
+    display: block;
+}
+
+/* Auth specific components */
+.auth-header {
+    background: #FFFFFF;
+    padding: 20px 40px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    position: relative;
+    border-left: 30px solid #5DAA98; 
+    border-right: 30px solid #5DAA98;
+}
+
+.auth-logo {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #512728;
+    margin: 0;
+}
+
+.auth-nav {
+    display: flex;
+    gap: 15px;
+}
+
+/* Survey styles */
+.survey-group {
+    margin-bottom: 40px;
+    padding: 25px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.survey-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.survey-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.survey-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.survey-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #512728;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.options-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.option-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.option-item:hover {
+    background: #F5F5F5;
+    border-color: #E6E6E6;
+}
+
+.option-item input {
+    display: none;
+}
+
+.custom-radio,
+.custom-checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #E6E6E6;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 2px;
+    position: relative;
+    transition: all 0.3s ease;
+    background: #FFFFFF;
+}
+
+.custom-checkbox {
+    border-radius: 4px;
+}
+
+.option-item input:checked + .custom-radio,
+.option-item input:checked + .custom-checkbox {
+    border-color: #5DAA98;
+    background: #5DAA98;
+}
+
+.option-item input:checked + .custom-radio::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+}
+
+.option-item input:checked + .custom-checkbox::after {
+    content: '';
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    width: 10px;
+    height: 6px;
+    border: 2px solid white;
+    border-top: none;
+    border-right: none;
+    background: transparent;
+}
+
+.option-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #333;
+    flex: 1;
+}
+
+.confirm-btn {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 40px auto 0;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Focus styles for accessibility */
+.option-item:focus-within {
+    outline: 2px solid #5DAA98;
+    outline-offset: 2px;
+}
+
+/* Validation styles */
+.error-message {
+    color: #ff4444;
+    font-size: 12px;
+    margin-top: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.group-error-message {
+    color: #ff4444;
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 10px;
+    background: #fff5f5;
+    border: 1px solid #ff4444;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.input-field input:invalid,
+.input-field input.error {
+    border-color: #ff4444 !important;
+}
+
+.input-field input:valid {
+    border-color: #5DAA98 !important;
+}
+
+/* Акордеон */
+.accordion-section {
+    text-align: center;
+    margin: 60px auto 40px;
+    max-width: 800px;
+    padding: 20px;
+}
+
+#show-more-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #5DAA98;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+#show-more-btn:hover {
+    background: #4a8c7c;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#show-more-btn.active {
+    background: #512728;
+    color: white;
+}
+
+#hidden-content {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 25px;
+    text-align: left;
+    border-left: 4px solid #5DAA98;
+    font-size: 15px;
+    line-height: 1.6;
+    display: none;
+    transition: max-height 0.3s ease;
+}
+
+#hidden-content h3 {
+    color: #512728;
+    margin-bottom: 15px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#hidden-content p {
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.accordion-list {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.accordion-list li {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.safe-ingredient {
+    color: #5DAA98;
+    font-weight: bold;
+}
+
+.warning-ingredient {
+    color: #ff8800;
+    font-weight: bold;
+}
+
+.danger-ingredient {
+    color: #ff4444;
+    font-weight: bold;
+}
+
+/* Динамічно доданий елемент з дисклеймером */
+.js-dynamic-element {
+    text-align: center;
+    margin: 40px auto 0;
+    background: #f9f9f9;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #666;
+    border-left: 4px solid #5DAA98;
+    max-width: 800px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.disclaimer-content {
+    padding: 20px;
+}
+
+.disclaimer-content p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.disclaimer-content strong {
+    color: #512728;
+    font-weight: 600;
+}
+
+/* Підсвітка для .benefit-text */
+.benefit-highlight {
+    color: #5DAA98 !important;
+    font-weight: 600 !important;
+}
+
+/* Підсвітка меню при наведенні */
+.menu-highlight {
+    background-color: #5DAA98 !important;
+    color: white !important;
+    transform: scale(1.05);
+    transition: all 0.3s ease !important;
+    box-shadow: 0 2px 8px rgba(93, 170, 152, 0.3);
+}
+
+/* Дата у футері */
+#current-date {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Виправлення для темної теми - при наведенні */
+.dark-theme .option-item:hover {
+    background: #fff !important;
+    border-color: #5DAA98 !important;
+}
+
+.dark-theme .option-item:hover .option-text {
+    color: #000 !important;
+}
+
+/* Заголовки опитування */
+.dark-theme .survey-title {
+    color: #512728 !important;
+}
+
+/* Кнопка підтвердження в темній темі */
+.dark-theme .confirm-btn {
+    background: #5DAA98 !important;
+    color: white !important;
+}
+
+.dark-theme .confirm-btn:hover {
+    background: #4a8c7c !important;
+}
+
+/* Перемикач теми на головній */
+.dark-theme #theme-toggle {
+    background: #5DAA98 !important;
+    color: white !important;
+    border-color: #5DAA98 !important;
+}
+
+/* Виправлення для темної теми - пункти опитування */
+.dark-theme .option-item .option-text {
+    color: #f0f0f0 !important;
+}
+
+.dark-theme .option-item input:checked + .custom-radio + .option-text,
+.dark-theme .option-item input:checked + .custom-checkbox + .option-text {
+    color: #000 !important;
+    font-weight: 600;
+}
+
+
+/* Повідомлення про успіх */
+.form-success-message {
+    text-align: center;
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 500px;
+    border-radius: 8px;
+    display: none;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #4caf50;
+}
+
+/* Помилки в текстових полях */
+.field-error {
+    border: 2px solid #ff4444 !important;
+    border-radius: 4px;
+}
+
+.field-error-message {
+    color: #ff4444;
+    font-size: 14px;
+    margin-top: 5px;
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 5px;
+}
+
+/* Помилки в групах опитування */
+.survey-error-message {
+    color: #ff4444;
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 10px;
+    background: #fff5f5;
+    border: 2px solid #ff4444;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* Стилі для кнопки теми на головній сторінці */
+.theme-toggle-home {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    margin: 0;
+}
+
+/* Стилі для аналізатора інгредієнтів */
+.ingredient-safety {
+    font-weight: bold;
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.ingredient-safety.safe {
+    color: #5DAA98;
+    background-color: rgba(93, 170, 152, 0.1);
+}
+
+.ingredient-safety.warning {
+    color: #ff8800;
+    background-color: rgba(255, 136, 0, 0.1);
+}
+
+.ingredient-safety.danger {
+    color: #ff4444;
+    background-color: rgba(255, 68, 68, 0.1);
+}
+
+/* Помилки в аналізаторі */
+.ingredient-error {
+    border: 2px solid #ff4444 !important;
+    border-radius: 4px;
+}
+
+.ingredient-error-message {
+    color: #ff4444;
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: center;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Адаптивність для мобільних */
+@media (max-width: 768px) {
+    .js-dynamic-element {
+        margin: 30px 15px 0;
+        font-size: 13px;
+    }
+    
+    .disclaimer-content {
+        padding: 15px;
+    }
+}
+
+    .theme-toggle-home {
+        top: 15px;
+        right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .theme-toggle-home {
+        top: 10px;
+        right: 10px;
+    }
+}
+    
